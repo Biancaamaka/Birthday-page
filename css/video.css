@@ -1,0 +1,193 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.4;
+
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.landing {
+  position: absolute;
+  z-index: 101;
+  top: 0;
+  left: 0;
+
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: #000;
+}
+
+.landing video {
+  background: url(/img/pedro-monteiro-HfIex7qwTlI-unsplash.jpg);
+}
+
+#showcase {
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+
+  background: #333 url(./img/laughter.png) no-repeat center center/cover;
+  color: #fff;
+}
+
+#showcase .showcase-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 2rem;
+
+  /* for the overlay */
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  
+  transform: translateY(-50%);
+
+  pointer-events: none;
+}
+
+.incolor{
+  color: #f5bb00;
+}
+
+a{
+  text-decoration: none;
+}
+
+.btn {
+  display: inline-block;
+  color: #fff;
+  background: transparent;
+  padding: 0.5rem 2rem;
+  border: 3px solid #fff;
+  border-radius: 25px;
+
+  pointer-events: all;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #f5bb00;
+}
+
+#particles-js {
+  background: #333 url(../img/laughter.png) no-repeat center center/cover;
+  height: 100%;
+  width: 100%;
+  background-position: top center;
+}
+
+.l-heading {
+  font-size: 6rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.1;
+}
+
+.lead {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+/* styling of gallery section */
+
+.container{
+  width:100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: url(../img/calvin-polen-Z2PDgD5oJXs-unsplash.jpg);
+  height: 80vh;
+
+}
+
+.image{
+width: 70%;
+
+}
+.google{
+  width: 82%;
+  height: 87%;
+}
+ /* gallery animation */
+
+#image-1{
+  transform: translateX(-1200px);
+  animation: first 2s forwards ease-in;
+}
+#image-2{
+  transform: translateY(-1200px);
+  animation: second 2s 2s forwards ease-in;
+}
+#image-3{
+  transform: translateY(1200px);
+  animation: third 2s 4s forwards ease-in;
+}
+#image-4{
+  transform: translateX(1200px);
+  animation: fourth 2s 6s forwards ease-in;
+}
+/* keyframes */
+@keyframes first{
+  to{
+      transform: translateX(0);
+  }
+}
+
+@keyframes second{
+  to{
+      transform: translateY(0);
+  }
+}
+
+@keyframes third{
+  to{
+      transform: translateY(0);
+  }
+}
+
+@keyframes fourth{
+  to{
+      transform: translateX(0);
+  }
+}
+
+.wrapper{
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 2rem;
+  overflow: hidden;
+}
+.bg-dark{
+  background: black;
+  color: #f4f4f4;
+  padding:1.5rem 0;
+  text-align: center;
+}
+@media(max-width: 500px) {
+  .l-heading{
+      font-size: 4rem;
+  }
+}
